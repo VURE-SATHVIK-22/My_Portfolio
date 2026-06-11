@@ -24,9 +24,10 @@ const Home = () => {
     }
 
     useGSAP(() => { 
-        Draggable.create(".folder", {
+        const instances = Draggable.create(".folder", {
             bounds: "#home", // Keep icons within the desktop
             inertia: true,
+            allowEventDefault: true,
             onClick: function() {
                 const projectId = parseInt(this.target.getAttribute("data-project-id"));
                 const project = projects.find(p => p.id === projectId);
@@ -35,6 +36,10 @@ const Home = () => {
                 }
             }
         });
+
+        return () => {
+            instances.forEach(instance => instance.kill());
+        };
     }, []);
 
   return (
@@ -47,6 +52,7 @@ const Home = () => {
                     // 'folder' is not a tailwind class but useful for GSAP selector
                     className={clsx("group folder font-sf", project.windowPosition)}
                     data-project-id={project.id}
+                    onClick={() => handleOpenProjectFinder(project)}
                 >
                     <img src="/images/folder.png" alt={project.name} draggable={false} className="pointer-events-none" />
                     <p>{project.name}</p>

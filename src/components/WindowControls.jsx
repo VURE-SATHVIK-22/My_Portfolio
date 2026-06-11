@@ -5,7 +5,7 @@ const WindowControls = ({ target }) => {
     const { closeWindow } = useWindowStore();
   return (
     <div id = "window-controls">
-      <button className='close' onClick={() => closeWindow(target)} onTouchEnd={(e) => { e.stopPropagation(); closeWindow(target); }} />
+      <button className='close' onClick={(e) => { e.stopPropagation(); closeWindow(target); }} />
       <button className='minimize' />
       <button className='maximize' />
     </div>

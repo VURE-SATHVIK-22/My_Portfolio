@@ -30,24 +30,15 @@ const WindowWrapper = (Component, windowKey) => {
             const header = ele.querySelector('#window-header');
             const [instance] = Draggable.create(ele, { 
                 trigger: header || ele,
-                onPress: () => focusWindow(windowKey),
-                allowEventDefault: true
+                allowEventDefault: true,
+                dragClickables: true,
+                allowNativeTouchScrolling: true
             });
 
-            const handleResize = () => {
-                if (window.innerWidth <= 640) {
-                    instance.disable();
-                } else {
-                    instance.enable();
-                }
-            };
-            
-            window.addEventListener('resize', handleResize);
-            handleResize();
-            
             return () => {
-                window.removeEventListener('resize', handleResize);
-                instance.kill();
+                if (instance) {
+                    instance.kill();
+                }
             };
         }, []);
 
@@ -63,6 +54,7 @@ const WindowWrapper = (Component, windowKey) => {
                 ref = {ref}
                 style = {{ zIndex }}
                 className= "absolute"
+                onPointerDownCapture={() => focusWindow(windowKey)}
             >
                 <Component {...props} />
             </section>
