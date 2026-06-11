@@ -27,8 +27,28 @@ const WindowWrapper = (Component, windowKey) => {
             const ele = ref.current;
             if(!ele) return;
 
-            const [instance] = Draggable.create(ele, { onPress: () => focusWindow(windowKey)});
-            return () => instance.kill();
+            const header = ele.querySelector('#window-header');
+            const [instance] = Draggable.create(ele, { 
+                trigger: header || ele,
+                onPress: () => focusWindow(windowKey),
+                allowEventDefault: true
+            });
+
+            const handleResize = () => {
+                if (window.innerWidth <= 640) {
+                    instance.disable();
+                } else {
+                    instance.enable();
+                }
+            };
+            
+            window.addEventListener('resize', handleResize);
+            handleResize();
+            
+            return () => {
+                window.removeEventListener('resize', handleResize);
+                instance.kill();
+            };
         }, []);
 
         useLayoutEffect(() => {
