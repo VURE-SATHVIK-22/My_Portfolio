@@ -37,24 +37,10 @@ const Safari = () => {
         </div>
 
         {/* Content Section: Fills remaining space and scrolls */}
-        <div className='blog flex-1 overflow-y-auto'>
-            <h2>My Articles</h2>
-            <div className='space-y-5'>
-                {blogPosts.map(({ id, image, title, date, link }) => (
-                    <div key={id} className='blog-post'>
-                        <div className='col-span-2'>
-                            <img src={image} alt={title} className="w-full h-auto object-cover rounded" />
-                        </div>
-
-                        <div className='content'>
-                            <p>{date}</p>
-                            <h3>{title}</h3>
-                            <a href={link} target="_blank" rel="noopener noreferrer">
-                                Check out the full post <MoveRight className='icon-hover' />
-                            </a>
-                        </div>
-                    </div>
-                ))}
+        <div className='blog flex-1 overflow-y-auto p-5'>
+            <h2 className="mb-4 text-2xl font-bold">My Resume</h2>
+            <div className='h-[calc(100%-3rem)] w-full bg-white rounded'>
+                <iframe src="/files/Vure_Sathvik_Resume.pdf" title="Resume" className="w-full h-full border-none rounded" />
             </div>
         </div>  
     </div>

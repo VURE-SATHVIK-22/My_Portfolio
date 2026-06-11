@@ -9,7 +9,7 @@ body {
   height: 100dvh;
 
   /* --- DARKENED WALLPAPER --- */
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/images/wallpaper.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/images/wallpaper.png");
   
   background-size: cover;
   background-repeat: no-repeat;

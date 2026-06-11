@@ -10,7 +10,9 @@ import useLocationStore from '../store/location';
 import gsap from "gsap";
 gsap.registerPlugin(Draggable);
 
-const projects = locations.work?.children ?? [];
+const projects = (locations.work?.children ?? []).filter(
+  p => p.name === "CodeReview-AI" || p.name === "Self-Healing-RAG-Pipeline"
+);
 
 const Home = () => {
     const { setActiveLocation } = useLocationStore();

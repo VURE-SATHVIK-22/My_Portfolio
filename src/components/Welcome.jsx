@@ -88,7 +88,7 @@ const Welcome = () => {
     return (
         <section id="welcome" className="select-none">
             <p ref={subtitleRef} className="tracking-tight">
-                {renderText("Hey, I'm Vishal! Welcome to my", "text-3xl", 100)}
+                {renderText("Hey, I'm Sathvik! Welcome to my", "text-3xl", 100)}
             </p>
             <h1 ref={titleRef} className="mt-7 tracking-tighter">
                 {renderText("Portfolio", "text-9xl")}

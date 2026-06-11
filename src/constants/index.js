@@ -1,246 +1,50 @@
 const navLinks = [
-  {
-    id: 1,
-    name: "Projects",
-    type: "finder",
-  },
-  {
-    id: 4,
-    name: "Experience",
-    type: "experience",
-  },
-  {
-    id: 4,
-    name: "Certifications",
-    type: "certifications"
-  },
-  {
-    id: 2,
-    name: "Contact",
-    type: "contact",
-  },
-  {
-    id: 3,
-    name: "Resume",
-    type: "resume",
-  },
+  { id: 1, name: "Projects", type: "finder" },
+  { id: 2, name: "Experience", type: "experience" },
+  { id: 3, name: "Certifications", type: "certifications" },
+  { id: 4, name: "Contact", type: "contact" },
+  { id: 5, name: "Resume", type: "resume" },
 ];
 
 const navIcons = [
-  {
-    id: 1,
-    img: "/icons/wifi.svg",
-  },
-  {
-    id: 2,
-    img: "/icons/search.svg",
-  },
-  {
-    id: 3,
-    img: "/icons/user.svg",
-  },
-  {
-    id: 4,
-    img: "/icons/mode.svg",
-  },
+  { id: 1, img: "/icons/wifi.svg" },
+  { id: 2, img: "/icons/search.svg" },
+  { id: 3, img: "/icons/user.svg" },
+  { id: 4, img: "/icons/mode.svg" },
 ];
 
 const dockApps = [
-  {
-    id: "finder",
-    name: "Portfolio",
-    icon: "finder.png",
-    canOpen: true,
-  },
-  {
-    id: "safari",
-    name: "Articles",
-    icon: "safari.png",
-    canOpen: true,
-  },
-  {
-    id: "photos",
-    name: "Gallery",
-    icon: "photos.png",
-    canOpen: true,
-  },
-  {
-    id: "contact",
-    name: "Contact",
-    icon: "contact.png",
-    canOpen: true,
-  },
-  {
-    id: "terminal",
-    name: "Skills",
-    icon: "terminal.png",
-    canOpen: true,
-  },
-  {
-    id: "trash",
-    name: "Archive",
-    icon: "trash.png",
-    canOpen: true,
-  },
+  { id: "finder", name: "Portfolio", icon: "finder.png", canOpen: true },
+  { id: "safari", name: "Resume", icon: "safari.png", canOpen: true },
+  { id: "photos", name: "Gallery", icon: "photos.png", canOpen: true },
+  { id: "contact", name: "Contact", icon: "contact.png", canOpen: true },
+  { id: "terminal", name: "Skills", icon: "terminal.png", canOpen: true },
+  { id: "trash", name: "Archive", icon: "trash.png", canOpen: true },
 ];
 
-const blogPosts = [
-  {
-    id: 1,
-    date: "Mar 2, 2025",
-    title:
-      "The Importance of System Design: Beyond the Basics",
-    image: "/images/sd.png",
-    link: "https://www.linkedin.com/pulse/importance-system-design-beyond-basics-vishal-sharma-zeruc",
-  },
-  {
-    id: 2,
-    date: "Aug 28, 2025",
-    title: "Unlocking the Power: How Mutex Locks Keep Your Game Running Smoothly",
-    image: "/images/mutex.png",
-    link: "https://www.linkedin.com/pulse/unlocking-power-how-mutex-locks-keep-your-game-running-sharma-inmcc",
-  },
-  {
-    id: 3,
-    date: "Jan 15, 2025",
-    title: "Dynamic NPC Behavior: A Deep Dive into Proximity-Based Spawning and Despawning",
-    image: "/images/npc.jpg",
-    link: "https://www.linkedin.com/pulse/dynamic-npc-behavior-deep-dive-proximity-based-spawning-sharma-9dane",
-  },
-  {
-    id: 4,
-    date: "Jan 6, 2025",
-    title: "Esports: The Algorithm of Excitement - Decoding the Future of Entertainment",
-    image: "/images/bgmi.jpg",
-    link: "https://www.linkedin.com/pulse/esports-algorithm-excitement-decoding-future-vishal-sharma-n8myc",
-  },
-];
+const blogPosts = [];
 
 const techStack = [
-  {
-    category: "Frontend",
-    items: ["React.js", "Next.js", "TypeScript"],
-  },
-  {
-    category: "Game Dev",
-    items: ["Unity", "C#"],
-  },
-  {
-    category: "Mobile",
-    items: ["React Native", "Expo"],
-  },
-  {
-    category: "Programming",
-    items: ["Java", "Python", "C++"],
-  },
-  {
-    category: "Backend",
-    items: ["Node.js", "Express", "RAG"],
-  },
-  {
-    category: "Database",
-    items: ["MongoDB", "PostgreSQL", "VectorDB"],
-  },
-  {
-    category: "Dev Tools",
-    items: ["Git", "GitHub", "Docker"],
-  },
+  { category: "Languages", items: ["Java", "Python", "JavaScript", "C", "C++", "SQL"] },
+  { category: "Frameworks", items: ["Spring Boot", "Node.js", "Express.js", "React.js", "FastAPI"] },
+  { category: "AI / ML", items: ["NLP", "LLMs", "RAG Pipelines", "Prompt Engineering"] },
+  { category: "Databases", items: ["MySQL", "MongoDB", "Redis", "FAISS", "Pinecone"] },
+  { category: "Cloud", items: ["AWS", "Docker", "CI/CD", "Kafka", "Airflow"] },
 ];
 
 const socials = [
-  {
-    id: 1,
-    text: "Github",
-    icon: "/icons/github.svg",
-    bg: "#000000",
-    link: "https://github.com/vishalsaikumarsharma",
-  },
-  {
-    id: 2,
-    text: "LeetCode",
-    icon: "/icons/leetcode.svg",
-    bg: "#FFA116",
-    link: "https://leetcode.com/vishal4919",
-  },
-  {
-    id: 3,
-    text: "YouTube",
-    icon: "/icons/youtube-outlined.svg",
-    bg: "#FF0000",
-    link: "https://www.youtube.com/@vishal4919",
-  },
-  {
-    id: 4,
-    text: "LinkedIn",
-    icon: "/icons/linkedin.svg",
-    bg: "#0077B5",
-    link: "https://www.linkedin.com/in/vishalsharma",
-  },
+  { id: 1, text: "Github", icon: "/icons/github.svg", bg: "#000000", link: "https://github.com/VURE-SATHVIK-22" },
+  { id: 2, text: "LinkedIn", icon: "/icons/linkedin.svg", bg: "#0077B5", link: "https://www.linkedin.com/in/vure-sathvik" },
 ];
 
 const photosLinks = [
-  {
-    id: 1,
-    icon: "/icons/gicon1.svg",
-    title: "Library",
-  },
-  {
-    id: 2,
-    icon: "/icons/gicon2.svg",
-    title: "Memories",
-  },
-  {
-    id: 3,
-    icon: "/icons/file.svg",
-    title: "Places",
-  },
-  {
-    id: 4,
-    icon: "/icons/gicon4.svg",
-    title: "People",
-  },
-  {
-    id: 5,
-    icon: "/icons/gicon5.svg",
-    title: "Favorites",
-  },
+  { id: 1, icon: "/icons/gicon1.svg", title: "Library" },
 ];
 
 const gallery = [
-  // {
-  //   id: 1,
-  //   img: "/images/1.jpeg",
-  // },
-  {
-    id: 2,
-    img: "/images/2.jpeg",
-  },
-  {
-    id: 3,
-    img: "/images/3.jpeg",
-  },
 ];
 
-export {
-  navLinks,
-  navIcons,
-  dockApps,
-  blogPosts,
-  techStack,
-  socials,
-  photosLinks,
-  gallery,
-};
-
-// --- FILE SYSTEM DATA ---
-// IDs are structured to be unique:
-// 100 series -> Work folders
-// 1000 series -> Work items
-// 200 series -> About items
-// 300 series -> Resume items
-// 400 series -> Trash items
-// 500 series -> Experience folders
-// 5000 series -> Experience items
+export { navLinks, navIcons, dockApps, blogPosts, techStack, socials, photosLinks, gallery };
 
 const WORK_LOCATION = {
   id: 1,
@@ -249,166 +53,695 @@ const WORK_LOCATION = {
   icon: "/icons/work.svg",
   kind: "folder",
   children: [
-    // ▶ Project 1
     {
       id: 10,
-      name: "TDM Multiplayer",
+      name: "app",
       icon: "/images/folder.png",
       kind: "folder",
-      position: "top-10 left-5",
-      windowPosition: "top-[5vh] left-5",
+      position: "top-[5vh] left-[5vw]",
+      windowPosition: "top-[10vh] left-10",
       children: [
         {
           id: 101,
-          name: "TDM Multiplayer.txt",
+          name: "Description.txt",
           icon: "/images/txt.png",
           kind: "file",
           fileType: "txt",
           position: "top-5 left-10",
           description: [
-            "A high-octane Team Deathmatch shooter engineered for competitive play. Built with Unity and C#, this project focuses on responsive mechanics and real-time network synchronization using Photon PUN.",
-            "Key Features:",
-            "• seamless Multiplayer: Low-latency networking ensures every shot counts.",
-            "• Secure Backend: Integrated Firebase Authentication (OAuth) for secure user login.",
-            "• Persistent Data: Utilizes Cloud Firestore to track player progression, K/D ratios, and match history in real-time.",
-            "It's not just a game, it's a full-stack multiplayer architecture demonstrating scalable code and robust cloud integration."
-          ],
+            "A GitHub repository."
+          ]
         },
         {
           id: 102,
-          name: "gameplay-video.com",
+          name: "GitHub Link",
           icon: "/images/safari.png",
           kind: "file",
           fileType: "url",
-          href: "https://youtu.be/mZx57gI02Jc",
-          position: "top-10 right-20",
-        },
-        {
-          id: 103,
-          name: "main-menu.png",
-          icon: "/images/image.png",
-          kind: "file",
-          fileType: "img",
-          position: "top-52 right-80",
-          imageUrl: "/images/main-menu.png",
-        },
-        {
-          id: 104,
-          name: "Gameplay UI.png",
-          icon: "/images/image.png",
-          kind: "file",
-          fileType: "img",
-          position: "top-60 right-20",
-          imageUrl: "/images/gameplay-av.jpg",
-        },
-      ],
+          href: "https://github.com/VURE-SATHVIK-22/app",
+          position: "top-5 right-20"
+        }
+      ]
     },
-
-    // ▶ Project 2
     {
       id: 11,
-      name: "Git Commit Optimizer",
+      name: "CodeReview-AI",
       icon: "/images/folder.png",
       kind: "folder",
-      position: "top-52 right-80",
-      windowPosition: "top-[20vh] left-7",
+      position: "top-[5vh] left-[20vw]",
+      windowPosition: "top-[10vh] left-10",
       children: [
         {
           id: 111,
-          name: "AI Resume Analyzer Project.txt",
-          icon: "/images/txt.png",
-          kind: "file",
-          fileType: "txt",
-          position: "top-5 right-10",
-          description: [
-            "AI Resume Analyzer is a smart tool that helps you perfect your resume with instant feedback.",
-            "Instead of guessing what recruiters want, you get AI-powered insights on keywords, formatting, and overall impact.",
-            "Think of it like having a career coach—pointing out strengths, fixing weaknesses, and boosting your chances of landing interviews.",
-            "It's built with Next.js and Tailwind, so it runs fast, looks professional, and works seamlessly on any device.",
-          ],
-        },
-        {
-          id: 112,
-          name: "ai-resume-analyzer.com",
-          icon: "/images/safari.png",
-          kind: "file",
-          fileType: "url",
-          href: "https://youtu.be/iYOz165wGkQ?si=R1hs8Legl200m0Cl",
-          position: "top-20 left-20",
-        },
-        {
-          id: 113,
-          name: "ai-resume-analyzer.png",
-          icon: "/images/image.png",
-          kind: "file",
-          fileType: "img",
-          position: "top-52 left-80",
-          imageUrl: "/images/project-2.png",
-        },
-        {
-          id: 114,
-          name: "Design.fig",
-          icon: "/images/plain.png",
-          kind: "file",
-          fileType: "fig",
-          href: "https://google.com",
-          position: "top-60 left-5",
-        },
-      ],
-    },
-
-    // ▶ Project 3
-    {
-      id: 12,
-      name: "Rubix Rampage",
-      icon: "/images/folder.png",
-      kind: "folder",
-      position: "top-10 left-80",
-      windowPosition: "top-[33vh] left-7",
-      children: [
-        {
-          id: 121,
-          name: "Game Details.txt",
+          name: "Description.txt",
           icon: "/images/txt.png",
           kind: "file",
           fileType: "txt",
           position: "top-5 left-10",
           description: [
-            "PROJECT 1: RUBIX RAMPAGE (Open World Engine)",
-            "Rubix Rampage is an ambitious technical showcase—a fully functional open-world action game inspired by the mechanics of GTA Vice City. This wasn't just about building a game; it was about engineering a living, breathing world.",
-            "• Core Mechanics: I engineered a robust Third-Person Controller featuring advanced camera logic, responsive shooting mechanics, and arcade-style vehicle physics that feel satisfying to drive.",
-            "• AI & Systems: The world is populated by a Professional AI system. NPCs have specific patrol routes and behaviors, reacting dynamically to the player. I also implemented a scalable 'Wanted Level' police system that ramps up difficulty based on player actions.",
-            "• Game Loop: Beyond the sandbox, the game features a structured Mission System complete with cinematic cut-scenes to drive the narrative forward.",
+            "A GitHub repository."
+          ]
+        },
+        {
+          id: 112,
+          name: "GitHub Link",
+          icon: "/images/safari.png",
+          kind: "file",
+          fileType: "url",
+          href: "https://github.com/VURE-SATHVIK-22/CodeReview-AI",
+          position: "top-5 right-20"
+        }
+      ]
+    },
+    {
+      id: 12,
+      name: "CRUD",
+      icon: "/images/folder.png",
+      kind: "folder",
+      position: "top-[5vh] left-[35vw]",
+      windowPosition: "top-[10vh] left-10",
+      children: [
+        {
+          id: 121,
+          name: "Description.txt",
+          icon: "/images/txt.png",
+          kind: "file",
+          fileType: "txt",
+          position: "top-5 left-10",
+          description: [
+            "A GitHub repository."
           ]
         },
         {
           id: 122,
-          name: "gameplay-video.com",
+          name: "GitHub Link",
           icon: "/images/safari.png",
           kind: "file",
           fileType: "url",
-          href: "https://youtu.be/K0fmCSgu_UI",
-          position: "top-10 right-20",
+          href: "https://github.com/VURE-SATHVIK-22/CRUD",
+          position: "top-5 right-20"
+        }
+      ]
+    },
+    {
+      id: 13,
+      name: "Endpoint",
+      icon: "/images/folder.png",
+      kind: "folder",
+      position: "top-[5vh] left-[50vw]",
+      windowPosition: "top-[10vh] left-10",
+      children: [
+        {
+          id: 131,
+          name: "Description.txt",
+          icon: "/images/txt.png",
+          kind: "file",
+          fileType: "txt",
+          position: "top-5 left-10",
+          description: [
+            "A GitHub repository."
+          ]
         },
         {
-          id: 123,
-          name: "Cut Scenes.png",
-          icon: "/images/image.png",
+          id: 132,
+          name: "GitHub Link",
+          icon: "/images/safari.png",
           kind: "file",
-          fileType: "img",
-          position: "top-52 right-80",
-          imageUrl: "/images/cutscene.jpg",
+          fileType: "url",
+          href: "https://github.com/VURE-SATHVIK-22/Endpoint",
+          position: "top-5 right-20"
+        }
+      ]
+    },
+    {
+      id: 14,
+      name: "Fetch",
+      icon: "/images/folder.png",
+      kind: "folder",
+      position: "top-[20vh] left-[5vw]",
+      windowPosition: "top-[10vh] left-10",
+      children: [
+        {
+          id: 141,
+          name: "Description.txt",
+          icon: "/images/txt.png",
+          kind: "file",
+          fileType: "txt",
+          position: "top-5 left-10",
+          description: [
+            "A GitHub repository."
+          ]
         },
         {
-          id: 124,
-          name: "Gameplay UI.png",
-          icon: "/images/image.png",
+          id: 142,
+          name: "GitHub Link",
+          icon: "/images/safari.png",
           kind: "file",
-          fileType: "img",
-          position: "top-60 right-20",
-          imageUrl: "/images/gameplay.jpg",
+          fileType: "url",
+          href: "https://github.com/VURE-SATHVIK-22/Fetch",
+          position: "top-5 right-20"
+        }
+      ]
+    },
+    {
+      id: 15,
+      name: "LoginForm",
+      icon: "/images/folder.png",
+      kind: "folder",
+      position: "top-[20vh] left-[20vw]",
+      windowPosition: "top-[10vh] left-10",
+      children: [
+        {
+          id: 151,
+          name: "Description.txt",
+          icon: "/images/txt.png",
+          kind: "file",
+          fileType: "txt",
+          position: "top-5 left-10",
+          description: [
+            "A GitHub repository."
+          ]
         },
-      ],
+        {
+          id: 152,
+          name: "GitHub Link",
+          icon: "/images/safari.png",
+          kind: "file",
+          fileType: "url",
+          href: "https://github.com/VURE-SATHVIK-22/LoginForm",
+          position: "top-5 right-20"
+        }
+      ]
+    },
+    {
+      id: 16,
+      name: "mobileapp",
+      icon: "/images/folder.png",
+      kind: "folder",
+      position: "top-[20vh] left-[35vw]",
+      windowPosition: "top-[10vh] left-10",
+      children: [
+        {
+          id: 161,
+          name: "Description.txt",
+          icon: "/images/txt.png",
+          kind: "file",
+          fileType: "txt",
+          position: "top-5 left-10",
+          description: [
+            "A GitHub repository."
+          ]
+        },
+        {
+          id: 162,
+          name: "GitHub Link",
+          icon: "/images/safari.png",
+          kind: "file",
+          fileType: "url",
+          href: "https://github.com/VURE-SATHVIK-22/mobileapp",
+          position: "top-5 right-20"
+        }
+      ]
+    },
+    {
+      id: 17,
+      name: "MyCalculator",
+      icon: "/images/folder.png",
+      kind: "folder",
+      position: "top-[20vh] left-[50vw]",
+      windowPosition: "top-[10vh] left-10",
+      children: [
+        {
+          id: 171,
+          name: "Description.txt",
+          icon: "/images/txt.png",
+          kind: "file",
+          fileType: "txt",
+          position: "top-5 left-10",
+          description: [
+            "A GitHub repository."
+          ]
+        },
+        {
+          id: 172,
+          name: "GitHub Link",
+          icon: "/images/safari.png",
+          kind: "file",
+          fileType: "url",
+          href: "https://github.com/VURE-SATHVIK-22/MyCalculator",
+          position: "top-5 right-20"
+        }
+      ]
+    },
+    {
+      id: 18,
+      name: "myportfolio",
+      icon: "/images/folder.png",
+      kind: "folder",
+      position: "top-[35vh] left-[5vw]",
+      windowPosition: "top-[10vh] left-10",
+      children: [
+        {
+          id: 181,
+          name: "Description.txt",
+          icon: "/images/txt.png",
+          kind: "file",
+          fileType: "txt",
+          position: "top-5 left-10",
+          description: [
+            "A GitHub repository."
+          ]
+        },
+        {
+          id: 182,
+          name: "GitHub Link",
+          icon: "/images/safari.png",
+          kind: "file",
+          fileType: "url",
+          href: "https://github.com/VURE-SATHVIK-22/myportfolio",
+          position: "top-5 right-20"
+        }
+      ]
+    },
+    {
+      id: 19,
+      name: "Nodejs_1264",
+      icon: "/images/folder.png",
+      kind: "folder",
+      position: "top-[35vh] left-[20vw]",
+      windowPosition: "top-[10vh] left-10",
+      children: [
+        {
+          id: 191,
+          name: "Description.txt",
+          icon: "/images/txt.png",
+          kind: "file",
+          fileType: "txt",
+          position: "top-5 left-10",
+          description: [
+            "A GitHub repository."
+          ]
+        },
+        {
+          id: 192,
+          name: "GitHub Link",
+          icon: "/images/safari.png",
+          kind: "file",
+          fileType: "url",
+          href: "https://github.com/VURE-SATHVIK-22/Nodejs_1264",
+          position: "top-5 right-20"
+        }
+      ]
+    },
+    {
+      id: 20,
+      name: "Portfolio",
+      icon: "/images/folder.png",
+      kind: "folder",
+      position: "top-[35vh] left-[35vw]",
+      windowPosition: "top-[10vh] left-10",
+      children: [
+        {
+          id: 201,
+          name: "Description.txt",
+          icon: "/images/txt.png",
+          kind: "file",
+          fileType: "txt",
+          position: "top-5 left-10",
+          description: [
+            "A GitHub repository."
+          ]
+        },
+        {
+          id: 202,
+          name: "GitHub Link",
+          icon: "/images/safari.png",
+          kind: "file",
+          fileType: "url",
+          href: "https://github.com/VURE-SATHVIK-22/Portfolio",
+          position: "top-5 right-20"
+        }
+      ]
+    },
+    {
+      id: 21,
+      name: "React-API",
+      icon: "/images/folder.png",
+      kind: "folder",
+      position: "top-[35vh] left-[50vw]",
+      windowPosition: "top-[10vh] left-10",
+      children: [
+        {
+          id: 211,
+          name: "Description.txt",
+          icon: "/images/txt.png",
+          kind: "file",
+          fileType: "txt",
+          position: "top-5 left-10",
+          description: [
+            "A GitHub repository."
+          ]
+        },
+        {
+          id: 212,
+          name: "GitHub Link",
+          icon: "/images/safari.png",
+          kind: "file",
+          fileType: "url",
+          href: "https://github.com/VURE-SATHVIK-22/React-API",
+          position: "top-5 right-20"
+        }
+      ]
+    },
+    {
+      id: 22,
+      name: "RestfulBlog",
+      icon: "/images/folder.png",
+      kind: "folder",
+      position: "top-[50vh] left-[5vw]",
+      windowPosition: "top-[10vh] left-10",
+      children: [
+        {
+          id: 221,
+          name: "Description.txt",
+          icon: "/images/txt.png",
+          kind: "file",
+          fileType: "txt",
+          position: "top-5 left-10",
+          description: [
+            "A GitHub repository."
+          ]
+        },
+        {
+          id: 222,
+          name: "GitHub Link",
+          icon: "/images/safari.png",
+          kind: "file",
+          fileType: "url",
+          href: "https://github.com/VURE-SATHVIK-22/RestfulBlog",
+          position: "top-5 right-20"
+        }
+      ]
+    },
+    {
+      id: 23,
+      name: "Self-Healing-RAG-Pipeline",
+      icon: "/images/folder.png",
+      kind: "folder",
+      position: "top-[50vh] left-[20vw]",
+      windowPosition: "top-[10vh] left-10",
+      children: [
+        {
+          id: 231,
+          name: "Description.txt",
+          icon: "/images/txt.png",
+          kind: "file",
+          fileType: "txt",
+          position: "top-5 left-10",
+          description: [
+            "A GitHub repository."
+          ]
+        },
+        {
+          id: 232,
+          name: "GitHub Link",
+          icon: "/images/safari.png",
+          kind: "file",
+          fileType: "url",
+          href: "https://github.com/VURE-SATHVIK-22/Self-Healing-RAG-Pipeline",
+          position: "top-5 right-20"
+        }
+      ]
+    },
+    {
+      id: 24,
+      name: "SocialMedia",
+      icon: "/images/folder.png",
+      kind: "folder",
+      position: "top-[50vh] left-[35vw]",
+      windowPosition: "top-[10vh] left-10",
+      children: [
+        {
+          id: 241,
+          name: "Description.txt",
+          icon: "/images/txt.png",
+          kind: "file",
+          fileType: "txt",
+          position: "top-5 left-10",
+          description: [
+            "A GitHub repository."
+          ]
+        },
+        {
+          id: 242,
+          name: "GitHub Link",
+          icon: "/images/safari.png",
+          kind: "file",
+          fileType: "url",
+          href: "https://github.com/VURE-SATHVIK-22/SocialMedia",
+          position: "top-5 right-20"
+        }
+      ]
+    },
+    {
+      id: 25,
+      name: "TailwindCSS",
+      icon: "/images/folder.png",
+      kind: "folder",
+      position: "top-[50vh] left-[50vw]",
+      windowPosition: "top-[10vh] left-10",
+      children: [
+        {
+          id: 251,
+          name: "Description.txt",
+          icon: "/images/txt.png",
+          kind: "file",
+          fileType: "txt",
+          position: "top-5 left-10",
+          description: [
+            "A GitHub repository."
+          ]
+        },
+        {
+          id: 252,
+          name: "GitHub Link",
+          icon: "/images/safari.png",
+          kind: "file",
+          fileType: "url",
+          href: "https://github.com/VURE-SATHVIK-22/TailwindCSS",
+          position: "top-5 right-20"
+        }
+      ]
+    },
+    {
+      id: 26,
+      name: "TrustNet",
+      icon: "/images/folder.png",
+      kind: "folder",
+      position: "top-[65vh] left-[5vw]",
+      windowPosition: "top-[10vh] left-10",
+      children: [
+        {
+          id: 261,
+          name: "Description.txt",
+          icon: "/images/txt.png",
+          kind: "file",
+          fileType: "txt",
+          position: "top-5 left-10",
+          description: [
+            "A GitHub repository."
+          ]
+        },
+        {
+          id: 262,
+          name: "GitHub Link",
+          icon: "/images/safari.png",
+          kind: "file",
+          fileType: "url",
+          href: "https://github.com/VURE-SATHVIK-22/TrustNet",
+          position: "top-5 right-20"
+        }
+      ]
+    },
+    {
+      id: 27,
+      name: "vits-it-department-website",
+      icon: "/images/folder.png",
+      kind: "folder",
+      position: "top-[65vh] left-[20vw]",
+      windowPosition: "top-[10vh] left-10",
+      children: [
+        {
+          id: 271,
+          name: "Description.txt",
+          icon: "/images/txt.png",
+          kind: "file",
+          fileType: "txt",
+          position: "top-5 left-10",
+          description: [
+            "orchids-vits-it-department - Repository created from Orchids integration"
+          ]
+        },
+        {
+          id: 272,
+          name: "GitHub Link",
+          icon: "/images/safari.png",
+          kind: "file",
+          fileType: "url",
+          href: "https://github.com/VURE-SATHVIK-22/vits-it-department-website",
+          position: "top-5 right-20"
+        }
+      ]
+    },
+    {
+      id: 28,
+      name: "VURE-SATHVIK-22",
+      icon: "/images/folder.png",
+      kind: "folder",
+      position: "top-[65vh] left-[35vw]",
+      windowPosition: "top-[10vh] left-10",
+      children: [
+        {
+          id: 281,
+          name: "Description.txt",
+          icon: "/images/txt.png",
+          kind: "file",
+          fileType: "txt",
+          position: "top-5 left-10",
+          description: [
+            "A GitHub repository."
+          ]
+        },
+        {
+          id: 282,
+          name: "GitHub Link",
+          icon: "/images/safari.png",
+          kind: "file",
+          fileType: "url",
+          href: "https://github.com/VURE-SATHVIK-22/VURE-SATHVIK-22",
+          position: "top-5 right-20"
+        }
+      ]
+    },
+    {
+      id: 29,
+      name: "workshop",
+      icon: "/images/folder.png",
+      kind: "folder",
+      position: "top-[65vh] left-[50vw]",
+      windowPosition: "top-[10vh] left-10",
+      children: [
+        {
+          id: 291,
+          name: "Description.txt",
+          icon: "/images/txt.png",
+          kind: "file",
+          fileType: "txt",
+          position: "top-5 left-10",
+          description: [
+            "A GitHub repository."
+          ]
+        },
+        {
+          id: 292,
+          name: "GitHub Link",
+          icon: "/images/safari.png",
+          kind: "file",
+          fileType: "url",
+          href: "https://github.com/VURE-SATHVIK-22/workshop",
+          position: "top-5 right-20"
+        }
+      ]
+    },
+    {
+      id: 30,
+      name: "Workshop_IT",
+      icon: "/images/folder.png",
+      kind: "folder",
+      position: "top-[80vh] left-[5vw]",
+      windowPosition: "top-[10vh] left-10",
+      children: [
+        {
+          id: 301,
+          name: "Description.txt",
+          icon: "/images/txt.png",
+          kind: "file",
+          fileType: "txt",
+          position: "top-5 left-10",
+          description: [
+            "A GitHub repository."
+          ]
+        },
+        {
+          id: 302,
+          name: "GitHub Link",
+          icon: "/images/safari.png",
+          kind: "file",
+          fileType: "url",
+          href: "https://github.com/VURE-SATHVIK-22/Workshop_IT",
+          position: "top-5 right-20"
+        }
+      ]
+    },
+    {
+      id: 31,
+      name: "Workshop_P",
+      icon: "/images/folder.png",
+      kind: "folder",
+      position: "top-[80vh] left-[20vw]",
+      windowPosition: "top-[10vh] left-10",
+      children: [
+        {
+          id: 311,
+          name: "Description.txt",
+          icon: "/images/txt.png",
+          kind: "file",
+          fileType: "txt",
+          position: "top-5 left-10",
+          description: [
+            "A GitHub repository."
+          ]
+        },
+        {
+          id: 312,
+          name: "GitHub Link",
+          icon: "/images/safari.png",
+          kind: "file",
+          fileType: "url",
+          href: "https://github.com/VURE-SATHVIK-22/Workshop_P",
+          position: "top-5 right-20"
+        }
+      ]
+    },
+    {
+      id: 32,
+      name: "Workshop_Portfolio",
+      icon: "/images/folder.png",
+      kind: "folder",
+      position: "top-[80vh] left-[35vw]",
+      windowPosition: "top-[10vh] left-10",
+      children: [
+        {
+          id: 321,
+          name: "Description.txt",
+          icon: "/images/txt.png",
+          kind: "file",
+          fileType: "txt",
+          position: "top-5 left-10",
+          description: [
+            "A GitHub repository."
+          ]
+        },
+        {
+          id: 322,
+          name: "GitHub Link",
+          icon: "/images/safari.png",
+          kind: "file",
+          fileType: "url",
+          href: "https://github.com/VURE-SATHVIK-22/Workshop_Portfolio",
+          position: "top-5 right-20"
+        }
+      ]
     },
   ],
 };
@@ -421,58 +754,21 @@ const ABOUT_LOCATION = {
   kind: "folder",
   children: [
     {
-      id: 201,
-      name: "me.png",
-      icon: "/images/image.png",
-      kind: "file",
-      fileType: "img",
-      position: "top-10 left-5",
-      imageUrl: "/images/itsme.jpg",
-    },
-    {
-      id: 202,
-      name: "with-gameeon-ceo.png",
-      icon: "/images/image.png",
-      kind: "file",
-      fileType: "img",
-      position: "top-28 right-72",
-      imageUrl: "/images/gameeon.jpeg",
-    },
-    {
-      id: 203,
-      name: "with-ajay.png",
-      icon: "/images/image.png",
-      kind: "file",
-      fileType: "img",
-      position: "top-52 left-80",
-      imageUrl: "/images/nodwin.jpeg",
-    },
-    {
       id: 204,
       name: "about-me.txt",
       icon: "/images/txt.png",
       kind: "file",
       fileType: "txt",
-      position: "top-60 left-5",
-      subtitle: "Meet the Developer Behind the Code",
-      image: "/images/main.jpeg",
+      position: "top-10 left-10",
+      subtitle: "Software Engineering Intern",
+      image: "/images/profile-photo.jpg",
       description: [
-        "Hey! I’m Vishal 👋. I don't just write code; I engineer experiences. I’m a Game Developer at heart and a Full-Stack Architect by trade.",
-        "My playground is Unity and C#, where I craft high-performance multiplayer games. From handling real-time network sync with Photon PUN to optimizing frame rates, I thrive on the complexity of bringing virtual worlds to life.",
-        "Beyond gaming, I’m a heavy hitter in the MERN stack and RAG development. Armed with elite DSA skills and a passion for System Design, I build scalable, intelligent applications that solve hard problems efficiently.",
-        "Currently, I'm driving impact at TechCorp as an Associate Software Engineer, bridging the gap between creative game mechanics and robust enterprise software.",
-        "Whether it's optimizing a render loop or architecting a cloud backend, I'm obsessed with performance, precision, and pushing the boundaries of what code can do. Let's build something legendary. 🚀",
+        "Hey! I am VURE SATHVIK 👋.",
+        "I'm an aspiring Software Engineer with expertise in modern full-stack development, AI/ML, and scalable systems.",
+        "I have built production-ready applications utilizing React.js, Node.js, Spring Boot, and AI tools like LangChain and LangGraph.",
+        "I thrive in building self-healing pipelines, optimizing code review systems, and working on impactful projects.",
+        "Let's build something legendary. 🚀"
       ],
-    },
-    {
-      id: 205,
-      name: "Game Dev Me.png",
-      icon: "/images/image.png",
-      kind: "file",
-      fileType: "img",
-      href: "https://youtu.be/mZx57gI02Jc",
-      position: "top-10 right-20",
-      imageUrl: "/images/stats.jpeg",
     },
   ],
 };
@@ -486,7 +782,7 @@ const RESUME_LOCATION = {
   children: [
     {
       id: 301,
-      name: "Resume.pdf",
+      name: "Vure_Sathvik_Resume.pdf",
       icon: "/images/pdf.png",
       kind: "file",
       fileType: "pdf",
@@ -498,87 +794,29 @@ const EXPERIENCE_LOCATION = {
   id: 5,
   type: "experience",
   name: "Experience",
-  icon: "/icons/work.svg", // Using Briefcase/Work icon
+  icon: "/icons/work.svg",
   kind: "folder",
   children: [
-    // Sub-folder 1: Previous Company
     {
       id: 50,
-      name: "TechCorp",
+      name: "Chakravyuha Dynamics",
       icon: "/images/folder.png",
       kind: "folder",
       position: "top-10 left-10",
       children: [
         {
           id: 501,
-          name: "Role & Responsibilities.txt",
+          name: "Software Engineering Intern.txt",
           icon: "/images/txt.png",
           kind: "file",
           fileType: "txt",
           position: "top-5 left-10",
           description: [
-                "-> Software Engineer | May 2026 - Present",
-                "• Architected a scalable, concurrent Java integration service featuring dynamically configurable thread pools for high-volume data ingestion into Hexagon EAM and DB Pro, automating workflow execution and reducing QA cycle time by 80%.",
-                "• Spearheaded AI-assisted engineering initiatives by developing and deploying custom Copilot Agents, accelerating development lifecycles and boosting team productivity by 40%.",
-                "• Optimized enterprise architecture and backend systems using advanced LLM tooling (Claude Code) to refactor complex backend logic and Extensibility Frameworks, driving a 60% improvement in overall application performance and efficiency.",
-                "   ",
-                "-> Associate Software Engineer | Aug 2024 - May 2026",
-                "• Agile Planning & Execution: Actively contribute to SAFe Program Increment (PI) Planning to define and align on sprint objectives. Utilize Azure DevOps to manage and track assigned tasks and deliverables from onshore teams, ensuring clear communication and timely execution.",
-                "• Backend Automation: Specialize in PL/SQL-based Business Flex Rules to automate backend logic, using triggers to ensure real-time data integrity and improve asset management process efficiency by ~20%.",
-                "• Full-Stack Enhancement: Develop scalable workflows using Ext JS and design custom screens and grids with UDS/Grid Designer to enhance the core functionality of Hexagon EAM, significantly improving user productivity.",
-                "• Awarded 'Best Performer' in first 3 months for adaptability and early delivery.",
-            ]
-        },
-        // {
-        //   id: 502,
-        //   name: "Party-night.png",
-        //   icon: "/images/image.png",
-        //   kind: "file",
-        //   fileType: "img",
-        //   position: "top-5 left-40",
-        //   imageUrl: "/images/party.jpeg"
-        // },
-        // {
-        //   id: 503,
-        //   name: "Offer_Letter.pdf", 
-        //   icon: "/images/pdf.png",
-        //   kind: "file",
-        //   fileType: "pdf",
-        //   position: "top-32 left-10"
-        // }
-      ]
-    },
-    // Sub-folder 2: Another Company / Internship
-    {
-      id: 51,
-      name: "Kanine Klans",
-      icon: "/images/folder.png",
-      kind: "folder",
-      position: "top-10 left-48",
-      children: [
-        {
-          id: 511,
-          name: "Internship Details.txt",
-          icon: "/images/txt.png",
-          kind: "file",
-          fileType: "txt",
-          position: "top-5 left-10",
-          description: [
-            "Software Engineer Intern | Aug 2023 - July 2024",
-            "• Developed a robust login system for the Kanine Klans game.",
-            "• Integrated Blockchain APIs to securely maintain user data and manage the in-game purchase system.",
-            "• Implemented complex game mechanics including the LAP system, AI NPC system, and Garage system.",
-            "• Worked on backend integration and game logic optimization."
+            "-> Software Engineering Intern | Mar 2026 – May 2026",
+            "• Built 5+ production web pages with modular React.js components, cutting page load time by 25% and improving cross-device reliability.",
+            "• Collaborated with a 3-engineer team to design and ship 3 new site sections (Products, Resources, Careers).",
+            "• Set up end-to-end CI/CD pipelines via Vercel with automated deployment workflows — maintained 99.9% uptime."
           ]
-        },
-        {
-          id: 512,
-          name: "Work.png",
-          icon: "/images/image.png",
-          kind: "file",
-          fileType: "img",
-          position: "top-5 left-40",
-          imageUrl: "/images/kk.jpeg"
         }
       ]
     }
@@ -589,95 +827,116 @@ const CERTIFICATIONS_LOCATION = {
   id: 6,
   type: "certifications",
   name: "Certifications",
-  icon: "/icons/file.svg", // Make sure to add a certificate icon to your public/icons folder
+  icon: "/icons/file.svg",
   kind: "folder",
   children: [
     {
-      id: 60,
-      name: "Microsoft",
-      icon: "/images/folder.png", // Replace with your actual logo image path
-      kind: "folder",
+      id: 601,
+      name: "Innovation and Entrepreneurship.txt",
+      icon: "/images/txt.png",
+      kind: "file",
+      fileType: "txt",
       position: "top-10 left-10",
-      children: [
-        {
-          id: 601,
-          name: "Microsoft Certified: Azure Administrator Associate.txt",
-          icon: "/images/txt.png",
-          kind: "file",
-          fileType: "txt",
-          position: "top-5 left-10",
-          description: [
-            "Microsoft Certified: Azure Administrator Associate",
-          ]
-        },
-        {
-          id: 602,
-          name: "Cerificate Link",
-          icon: "/images/safari.png",
-          kind: "file",
-          fileType: "url",
-          href: "https://learn.microsoft.com/en-gb/users/vishalsharma-7588/credentials/39884AD703B4BF2D?ref=https%3A%2F%2Fwww.linkedin.com%2F",
-          position: "top-5 right-15",
-        },
+      description: [
+        "Innovation and Entrepreneurship program."
       ]
     },
     {
-      id: 61,
-      name: "SAFe®",
-      icon: "/images/folder.png", // Replace with your actual logo image path
-      kind: "folder",
-      position: "top-10 left-48",
-      children: [
-        {
-          id: 611,
-          name: "Certified SAFe® 6 Practitioner.txt",
-          icon: "/images/txt.png",
-          kind: "file",
-          fileType: "txt",
-          position: "top-5 left-10",
-          description: [
-            "Certified SAFe® 6 Practitioner",
-          ]
-        },
-        {
-          id: 612,
-          name: "Cerificate Link",
-          icon: "/images/safari.png",
-          kind: "file",
-          fileType: "url",
-          href: "https://www.credly.com/badges/b6a4dfaf-39d5-42cc-8567-e2042b00ef68/linked_in_profile",
-          position: "top-20 right-25",
-        },
+      id: 602,
+      name: "Problem Solving (Basic).txt",
+      icon: "/images/txt.png",
+      kind: "file",
+      fileType: "txt",
+      position: "top-10 left-[20vw]",
+      description: [
+        "Problem Solving (Basic) Hackathon."
       ]
     },
     {
-      id: 62,
-      name: "Hero Vired x Nodwin Gaming",
-      icon: "/images/folder.png", // Replace with your actual logo image path
-      kind: "folder",
-      position: "top-10 right-20",
-      children: [
-        {
-          id: 611,
-          name: "Certificate Program in Gaming & Esports- Batch 4.txt",
-          icon: "/images/txt.png",
-          kind: "file",
-          fileType: "txt",
-          position: "top-25 left-25",
-          description: [
-            "Certificate Program in Gaming & Esports- Batch 4",
-          ]
-        },
-        {
-          id: 612,
-          name: "Cerificate Link",
-          icon: "/images/safari.png",
-          kind: "file",
-          fileType: "url",
-          href: "https://herovired.certificate.givemycertificate.com/c/efd6a38f-1446-4d03-bbeb-45ac6e3420e4",
-          position: "top-5 right-15",
-        },
+      id: 603,
+      name: "Hackathon Gitam.txt",
+      icon: "/images/txt.png",
+      kind: "file",
+      fileType: "txt",
+      position: "top-10 left-[40vw]",
+      description: [
+        "Hackathon at Gitam."
       ]
+    },
+    {
+      id: 604,
+      name: "Honors & Awards.txt",
+      icon: "/images/txt.png",
+      kind: "file",
+      fileType: "txt",
+      position: "top-[25vh] left-10",
+      description: [
+        "Honors-Awards:",
+        "Award for Delivering a Web Development Workshop."
+      ]
+    },
+    {
+      id: 610,
+      name: "AI Fundamentals.png",
+      icon: "/images/image.png",
+      kind: "file",
+      fileType: "img",
+      position: "top-[25vh] left-[20vw]",
+      imageUrl: "/images/ai-fundamentals.png"
+    },
+    {
+      id: 611,
+      name: "Communication Dynamics.png",
+      icon: "/images/image.png",
+      kind: "file",
+      fileType: "img",
+      position: "top-[25vh] left-[40vw]",
+      imageUrl: "/images/communication-dynamics.png"
+    },
+    {
+      id: 612,
+      name: "Problem Solving.png",
+      icon: "/images/image.png",
+      kind: "file",
+      fileType: "img",
+      position: "top-[40vh] left-10",
+      imageUrl: "/images/problem-solving.png"
+    },
+    {
+      id: 613,
+      name: "AWS Networking.png",
+      icon: "/images/image.png",
+      kind: "file",
+      fileType: "img",
+      position: "top-[40vh] left-[20vw]",
+      imageUrl: "/images/aws-networking.png"
+    },
+    {
+      id: 614,
+      name: "AWS Storage.png",
+      icon: "/images/image.png",
+      kind: "file",
+      fileType: "img",
+      position: "top-[40vh] left-[40vw]",
+      imageUrl: "/images/aws-storage.png"
+    },
+    {
+      id: 615,
+      name: "AWS Compute.png",
+      icon: "/images/image.png",
+      kind: "file",
+      fileType: "img",
+      position: "top-[55vh] left-10",
+      imageUrl: "/images/aws-compute.png"
+    },
+    {
+      id: 616,
+      name: "Data Science.png",
+      icon: "/images/image.png",
+      kind: "file",
+      fileType: "img",
+      position: "top-[55vh] left-[20vw]",
+      imageUrl: "/images/data-science.png"
     }
   ],
 };
@@ -688,26 +947,7 @@ const TRASH_LOCATION = {
   name: "Trash",
   icon: "/icons/trash.svg",
   kind: "folder",
-  children: [
-    {
-      id: 401,
-      name: "trash1.png",
-      icon: "/images/image.png",
-      kind: "file",
-      fileType: "img",
-      position: "top-10 left-10",
-      imageUrl: "/images/trash-1.png",
-    },
-    {
-      id: 402,
-      name: "trash2.png",
-      icon: "/images/image.png",
-      kind: "file",
-      fileType: "img",
-      position: "top-40 left-80",
-      imageUrl: "/images/trash-2.png",
-    },
-  ],
+  children: [],
 };
 
 export const locations = {

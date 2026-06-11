@@ -12,10 +12,10 @@ const Contact = () => {
         </div>
 
         <div className='p-5 space-y-5'>
-            <img src = "/images/vishalsharma.png" alt = "Vishal" className='w-20 rounded-full' />
+            <img src = "/images/profile-photo.jpg" alt = "Sathvik" className='w-20 rounded-full' />
             <h3>Let's connect</h3>
             <p>Got an idea? A bug to squash? or just wanna talk tech? I'm in.</p>
-            <p>Contact: vishalsharma730@gmail.com</p>
+            <p>Contact: vuresathvik22@gmail.com</p>
             <ul>
                 {socials.map(({ id, bg, link, icon, text }) => (
                     <li key = {id} style = {{ backgroundColor : bg }}>

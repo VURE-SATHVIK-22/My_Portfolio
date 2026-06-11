@@ -58,7 +58,7 @@ const Navbar = () => {
 
                 {/* App Name */}
                 <span className="font-bold text-[13px] tracking-wide cursor-default hidden sm:block">
-                    Vishal's Portfolio
+                    Sathvik's Portfolio
                 </span>
 
                 {/* Clickable Nav Items */}
