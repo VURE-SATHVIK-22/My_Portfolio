@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import WindowWrapper from '../hoc/WindowWrapper'
 import { WindowControls } from '../components';
 import { AlertCircle, Loader } from 'lucide-react';
@@ -23,6 +23,25 @@ const pdfOptions = {
 const Resume = () => {
     const [numPages, setNumPages] = useState(null);
     const [isError, setIsError] = useState(false);
+    const [pdfWidth, setPdfWidth] = useState(550);
+    const containerRef = useRef(null);
+
+    useEffect(() => {
+        const resizeObserver = new ResizeObserver((entries) => {
+            if (entries[0]) {
+                const containerWidth = entries[0].contentRect.width;
+                // Add some padding margin
+                const newWidth = Math.min(550, containerWidth - 40);
+                setPdfWidth(newWidth > 200 ? newWidth : 200);
+            }
+        });
+
+        if (containerRef.current) {
+            resizeObserver.observe(containerRef.current);
+        }
+
+        return () => resizeObserver.disconnect();
+    }, []);
 
     // Effect to handle console warnings if you really want to suppress them (Optional)
     useEffect(() => {
@@ -52,7 +71,7 @@ const Resume = () => {
             </div>
 
             {/* Scrollable Container */}
-            <div className="flex-1 overflow-y-auto bg-[#525659] p-4 flex justify-center relative">
+            <div ref={containerRef} className="flex-1 overflow-y-auto bg-[#525659] p-4 flex justify-center relative">
                 
                 {/* 3. FALLBACK UI */}
                 {isError ? (
@@ -81,8 +100,8 @@ const Resume = () => {
                                 pageNumber={index + 1} 
                                 renderAnnotationLayer={false} 
                                 renderTextLayer={false} 
-                                width={550}
-                                className="bg-white mb-4 shadow-md" 
+                                width={pdfWidth}
+                                className="bg-white mb-4 shadow-md max-w-full" 
                                 error={<div className="text-red-500 text-sm">Page Load Failed</div>}
                             />
                         ))}

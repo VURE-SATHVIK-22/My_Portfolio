@@ -153,14 +153,14 @@ body {
 
   /* --- WINDOW CONTROLS --- */
   #window-controls {
-    @apply flex gap-2 max-sm:hidden;
+    @apply flex gap-2;
     .close { @apply size-3.5 rounded-full bg-[#ff5f57] border border-black/10 cursor-pointer; }
     .minimize { @apply size-3.5 rounded-full bg-[#febc2e] border border-black/10; }
     .maximize { @apply size-3.5 rounded-full bg-[#28c840] border border-black/10; }
   }
 
   #window-header {
-    @apply flex items-center justify-between px-4 py-3 rounded-t-lg bg-[#2d2d2d] border-b border-black/50 select-none text-sm text-[#a1a1a1] max-sm:hidden shadow-sm;
+    @apply flex items-center justify-between px-4 py-3 rounded-t-lg bg-[#2d2d2d] border-b border-black/50 select-none text-sm text-[#a1a1a1] shadow-sm;
   }
 
   /* --- APPS / WINDOWS SCALING --- */
