@@ -3,7 +3,7 @@ const navLinks = [
   { id: 2, name: "Experience", type: "experience" },
   { id: 3, name: "Certifications", type: "certifications" },
   { id: 4, name: "Contact", type: "contact" },
-  { id: 5, name: "Resume", type: "resume" },
+  { id: 5, name: "Resume Preview", type: "resume" },
 ];
 
 const navIcons = [

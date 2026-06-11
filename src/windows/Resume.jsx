@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import WindowWrapper from '../hoc/WindowWrapper'
 import { WindowControls } from '../components';
-import { Download, AlertCircle, Loader } from 'lucide-react';
+import { AlertCircle, Loader } from 'lucide-react';
 import "react-pdf/dist/Page/AnnotationLayer.css";
 import "react-pdf/dist/Page/TextLayer.css";
 import { Document, Page, pdfjs } from 'react-pdf';
@@ -48,16 +48,7 @@ const Resume = () => {
         <div className="flex flex-col h-full w-full">
             <div id="window-header" className="flex-none">
                 <WindowControls target="resume" />
-                <h2>Resume.pdf</h2>
-
-                <a 
-                    href="/files/SathvikResume.pdf" 
-                    download
-                    className='cursor-pointer hover:bg-white/10 p-1.5 rounded transition-colors text-gray-300 hover:text-white'
-                    title="Download Resume"
-                >
-                    <Download className='icon w-4 h-4' />
-                </a>
+                <h2>Resume Preview</h2>
             </div>
 
             {/* Scrollable Container */}
@@ -68,13 +59,6 @@ const Resume = () => {
                     <div className="flex flex-col items-center justify-center text-gray-300 space-y-4 h-full">
                         <AlertCircle size={48} className="text-red-400" />
                         <p>Unable to render PDF preview.</p>
-                        <a 
-                            href="/files/SathvikResume.pdf" 
-                            download 
-                            className="bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 rounded text-sm font-medium transition-colors"
-                        >
-                            Download PDF Instead
-                        </a>
                     </div>
                 ) : (
                     <Document
