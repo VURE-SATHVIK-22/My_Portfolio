@@ -27,6 +27,13 @@ const Home = () => {
         Draggable.create(".folder", {
             bounds: "#home", // Keep icons within the desktop
             inertia: true,
+            onClick: function() {
+                const projectId = parseInt(this.target.getAttribute("data-project-id"));
+                const project = projects.find(p => p.id === projectId);
+                if (project) {
+                    handleOpenProjectFinder(project);
+                }
+            }
         });
     }, []);
 
@@ -39,9 +46,9 @@ const Home = () => {
                     // Combine folder classes with the dynamic position from data
                     // 'folder' is not a tailwind class but useful for GSAP selector
                     className={clsx("group folder font-sf", project.windowPosition)}
-                    onClick={() => handleOpenProjectFinder(project)}
+                    data-project-id={project.id}
                 >
-                    <img src="/images/folder.png" alt={project.name} />
+                    <img src="/images/folder.png" alt={project.name} draggable={false} className="pointer-events-none" />
                     <p>{project.name}</p>
                 </li>
             ))}
