@@ -40,7 +40,9 @@ const Safari = () => {
         <div className='blog flex-1 overflow-y-auto p-5'>
             <h2 className="mb-4 text-2xl font-bold">My Resume</h2>
             <div className='h-[calc(100%-3rem)] w-full bg-white rounded'>
-                <iframe src="/files/Vure_Sathvik_Resume.pdf" title="Resume" className="w-full h-full border-none rounded" />
+                <div className="w-full h-full border-none rounded flex items-center justify-center bg-[#525659] text-white">
+                    Please use the Resume Preview window to view the PDF.
+                </div>
             </div>
         </div>  
     </div>

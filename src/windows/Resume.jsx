@@ -62,7 +62,7 @@ const Resume = () => {
                     </div>
                 ) : (
                     <Document
-                        file="/files/SathvikResume.pdf"
+                        file="/files/Vure_Sathvik_Resume.pdf"
                         onLoadSuccess={onDocumentLoadSuccess}
                         onLoadError={onDocumentLoadError}
                         options={pdfOptions}
@@ -75,14 +75,17 @@ const Resume = () => {
                         }
                     >
                         {/* renderTextLayer={false} removes selectable text but fixes z-index/CSS issues. */}
-                        <Page 
-                            pageNumber={1} 
-                            renderAnnotationLayer={false} 
-                            renderTextLayer={false} 
-                            width={550}
-                            className="bg-white" 
-                            error={<div className="text-red-500 text-sm">Page Load Failed</div>}
-                        />
+                        {Array.from({ length: numPages }, (_, index) => (
+                            <Page 
+                                key={`page_${index + 1}`}
+                                pageNumber={index + 1} 
+                                renderAnnotationLayer={false} 
+                                renderTextLayer={false} 
+                                width={550}
+                                className="bg-white mb-4 shadow-md" 
+                                error={<div className="text-red-500 text-sm">Page Load Failed</div>}
+                            />
+                        ))}
                     </Document>
                 )}
             </div>
